@@ -27,14 +27,14 @@ export const App = () => {
   const [editName, setEditName] = useState('');
   const [editNumber, setEditNumber] = useState('');
 
-  useEffect(() => {
-    const savedContacts = localStorage.getItem(LS_CONTACTS_KEY);
-    const parsedContacts = savedContacts ? JSON.parse(savedContacts) : exampleContacts;
-    const isFormikSelected = localStorage.getItem(LS_IS_FORMIK_SELECTED)?.toString().toLocaleLowerCase === 'true';
+  // useEffect(() => {
+  //   const savedContacts = localStorage.getItem(LS_CONTACTS_KEY);
+  //   const parsedContacts = savedContacts ? JSON.parse(savedContacts) : exampleContacts;
+  //   const isFormikSelected = localStorage.getItem(LS_IS_FORMIK_SELECTED)?.toString().toLocaleLowerCase === 'true';
 
-    setContacts(parsedContacts);
-    setFormikSelected(isFormikSelected);
-  }, []);
+  //   setContacts(parsedContacts);
+  //   setFormikSelected(isFormikSelected);
+  // }, []);
 
   useEffect(() => {
     localStorage.setItem(LS_CONTACTS_KEY, JSON.stringify(contacts));
